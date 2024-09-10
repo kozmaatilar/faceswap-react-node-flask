@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a3a5a4;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #79817c;
+}
+
+.face-swap {
+  font-size: 1.2rem;
+  background: linear-gradient(-45deg, rgb(72, 79, 248), rgb(228, 79, 252), rgb(48, 181, 255));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.active-image {
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+}
+
+.swap-button.active {
+  background: linear-gradient(106.28deg, rgb(133, 96, 250) 0%, rgb(68, 211, 239) 90.81%);
+  cursor: pointer
+}
+
+.swap-button.active:hover {
+  background: linear-gradient(106.28deg, rgb(105, 65, 231) 0%, rgb(0, 201, 240) 90.81%);
+}
+
+.stocks .active img {
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(186, 132, 255);
+}
+
+.custom-image {
+  background: url("../public/assets/custom-face.png") center center / cover no-repeat;
+}
+
+.right-arrow {
+  background: url("../public/assets/right-arrow.png") no-repeat center / cover;
+}
+
+.add-image {
+  background: url("../public/assets/add-face.png") center center / cover no-repeat;
+}
+
+.footer {
+  background-color: #0f0f0f;
+}
+
+@media (max-height: 600px) {
+  .tweet-image {
+    height: 50vh;
+  }
+}
+
+@media (max-height: 450px) {
+  .tweet-image {
+    height: 40vh;
+  }
+}
+
+@media (max-height: 360px) {
+  .tweet-image {
+    height: 30vh;
+  }
+}
+
+@media (max-height: 300px) {
+  .tweet-image {
+    display: none;
+  }
+}
